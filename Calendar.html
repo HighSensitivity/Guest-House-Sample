@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/rome.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <title>Booking Calendar</title>
+<style>
+container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+</style>
+  </head>
+  
+<body class="body">
+<div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" id="Home" data-doc-height="1">
+            <div class="navigation-div">
+               
+                <a href="index.html" aria-current="page" class="brand w-nav-brand w--current"="home">
+                    <img src="https://i.imgur.com/W2VgqDY.png" width="150" alt="" class="image-1">
+                </a>			   
+
+                <nav role="navigation" class="nav-menu w-nav-menu">
+                    <a href="index.html" id="HOUSE" class="nav-link w-nav-link">Home</a>
+                    <a href="house.html" id="HOUSE" class="nav-link w-nav-link">Retreat House</a>
+                    <a href="Calendar.html" id="HOME" aria-current="page" class="nav-link w-nav-link w--current">Bookings</a>
+                    <a href="gallery.html" id="GALLERY" class="nav-link w-nav-link">GALLERY</a>
+                    <a href="contact.html" id="CONTACT" class="nav-link contact w-nav-link">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+  
+
+  <div class="content">
+    
+    <div class="container text-left">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="mb-5 text-center">Choose your selected days for booking</h2>
+          <form action="#" class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="input_from">From</label>
+                <input type="text" class="form-control" id="input_from" placeholder="Start Date">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="input_from">To</label>
+                <input type="text" class="form-control" id="input_to" placeholder="End Date">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+          
+    </div>
+	<div class="container">
+	       <form class="mt-4">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="area">Area</label>
+                <input type="text" class="form-control" id="area" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="confirmSelection()">Confirm</button>
+            <button type="button" class="btn btn-secondary" onclick="cancelSelection()">Cancel</button>
+        </form>
+	</div>
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/rome.js"></script>
+
+    <script src="js/main.js"></script>
+	
+	       <div class="section-32">
+						<a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/" role="button">
+							<i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="https://twitter.com/?lang=en" role="button">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="https://www.instagram.com/" role="button">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+        </div>
+  </body>
+</html>

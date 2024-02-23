@@ -1,0 +1,49 @@
+.slideshow-container {
+  display: flex;
+}
+
+.slideshow {
+  width: 70%;
+}
+
+.slideshow img {
+  width: 100%;
+  display: none;
+  padding: 150px;
+  background-color: #f2f2f2;
+}
+
+.details {
+  width: 30%;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.image-title {
+  font-weight: bold;
+}
+
+.image-description {
+  margin-top: 10px;
+}
+
+
+.slideshow img {
+  width: 100%;
+  display: none;
+  transition: transform 1.5s ease-in-out;
+}
+
+.slideshow img.active {
+  display: block;
+  transform: translateX(0);
+}
+
+.slideshow img.previous {
+  transform: translateX(-100%);
+}
+
