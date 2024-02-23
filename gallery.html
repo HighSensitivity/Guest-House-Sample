@@ -155,34 +155,49 @@ footer {
 
 
     <script>
-        // Wait for the DOM to be loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            var slideshowContainer = document.querySelector('.slideshow-container');
-            var slideshowImages = document.querySelectorAll('.slideshow img');
-            var currentIndex = 0;
-            slideshowImages[currentIndex].style.display = 'block';
+ document.addEventListener('DOMContentLoaded', function() {
+  var slideshowContainer = document.querySelector('.slideshow-container');
+  var slideshowImages = document.querySelectorAll('.slideshow img');
+  var currentIndex = 0;
+  slideshowImages[currentIndex].style.display = 'block';
 
-            function showNextImage() {
-                slideshowImages[currentIndex].style.display = 'none';
-                currentIndex = (currentIndex + 1) % slideshowImages.length;
-                slideshowImages[currentIndex].style.display = 'block';
-            }
+  function showNextImage() {
+    slideshowImages[currentIndex].style.transition = 'opacity 0.5s ease-out';
+    slideshowImages[currentIndex].style.opacity = '0';
 
-            function showPreviousImage() {
-                slideshowImages[currentIndex].style.display = 'none';
-                currentIndex = (currentIndex - 1 + slideshowImages.length) % slideshowImages.length;
-                slideshowImages[currentIndex].style.display = 'block';
-            }
+    setTimeout(function() {
+      slideshowImages[currentIndex].style.display = 'none';
+      slideshowImages[currentIndex].style.opacity = '1';
 
-            var slideshowInterval = setInterval(showNextImage, 2000);
-            slideshowContainer.addEventListener('mouseenter', function() {
-                clearInterval(slideshowInterval);
-            });
+      currentIndex = (currentIndex + 1) % slideshowImages.length;
+      slideshowImages[currentIndex].style.display = 'block';
+      slideshowImages[currentIndex].style.transition = 'opacity 0.5s ease-in';
+    }, 500);
+  }
 
-            slideshowContainer.addEventListener('mouseleave', function() {
-                slideshowInterval = setInterval(showNextImage, 2000);
-            });
-        });
+  function showPreviousImage() {
+    slideshowImages[currentIndex].style.transition = 'opacity 0.5s ease-out';
+    slideshowImages[currentIndex].style.opacity = '0';
+
+    setTimeout(function() {
+      slideshowImages[currentIndex].style.display = 'none';
+      slideshowImages[currentIndex].style.opacity = '1';
+
+      currentIndex = (currentIndex - 1 + slideshowImages.length) % slideshowImages.length;
+      slideshowImages[currentIndex].style.display = 'block';
+      slideshowImages[currentIndex].style.transition = 'opacity 0.5s ease-in';
+    }, 500);
+  }
+
+  var slideshowInterval = setInterval(showNextImage, 3000);
+  slideshowContainer.addEventListener('mouseenter', function() {
+    clearInterval(slideshowInterval);
+  });
+
+  slideshowContainer.addEventListener('mouseleave', function() {
+    slideshowInterval = setInterval(showNextImage, 3000);
+  });
+});
     </script>
 </body>
 
